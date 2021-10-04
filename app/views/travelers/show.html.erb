@@ -1,0 +1,12 @@
+<h1><%= @traveler.name %></h1>
+<p>
+  <%= @traveler.age %>
+</p>
+<br>
+<ul>
+  <% @traveler.vacations.where(favorite: true).each do |vacation| %>
+    <li>
+      <%= link_to vacation.country.name, country_path(vacation.country) %>
+    </li>
+  <% end %>
+</ul>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :countries, only: [:index]
-  resources :travelers, only: [:index]
+  resources :vacations
+  resources :countries
+  resources :travelers
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

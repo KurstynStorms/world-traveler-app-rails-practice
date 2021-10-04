@@ -1,0 +1,15 @@
+<h3>New Vacation</h3>
+<div>
+<%= form_for(@vacation) do |f| %>
+  <label>Country:</label><br>
+  <%= f.collection_select :country_id, @countries, :id, :name %><br>
+
+  <label>Traveler:</label><br>
+  <%= f.collection_select :traveler_id, @travelers, :id, :name %><br>
+
+  <%= f.label :favorite %><br>
+  <%= f.check_box :favorite, {}, true, false %><br>
+  
+  <%= f.submit %>
+<% end %>
+</div>
